@@ -7,6 +7,15 @@
 import rainflow
 
 def DEL_algorithm(timeseries, neq, m, display_cyclecount = False):
+#     Inputs:
+#         timeseries: array of datapoints
+#         neq: number of equivalent cycles
+#         m: wohler exponent of material
+#         display_cyclecount: set as False as default, set True if you want to see the actual rainflow cycle counting
+
+#     Outputs:
+#         Seq: Damage equivalent load (DEL) as a float
+
     dec = 4 # how many decimals should the ranges have
     cycle_count = rainflow.count_cycles(timeseries, ndigits = dec) # cycle counting
 
@@ -34,5 +43,4 @@ def DEL_algorithm(timeseries, neq, m, display_cyclecount = False):
     sum_sn = sum(list_sn) # sum (S_i^m * n_i)
     S_eq = (sum_sn/neq)**(1/m)
     S_eq = float(f'{S_eq:.4e}') # formatting result so it displays in standard form with 4 decimals (same precision as ranges)
-    return S_eq # returns DEL as float
-
+    return S_eq
