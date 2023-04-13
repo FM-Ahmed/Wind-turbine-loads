@@ -10,7 +10,7 @@ def DEL_algorithm(timeseries, neq, m, display_cyclecount = False):
 #     Inputs:
 #         timeseries: array of datapoints
 #         neq: number of equivalent cycles
-#         m: wohler exponent of material
+#         m: Wohler exponent of material
 #         display_cyclecount: set as False as default, set True if you want to see the actual rainflow cycle counting
 
 #     Outputs:
