@@ -42,5 +42,5 @@ def DEL_algorithm(timeseries, neq, m, display_cyclecount = False):
 
     sum_sn = sum(list_sn) # sum (S_i^m * n_i)
     S_eq = (sum_sn/neq)**(1/m)
-    S_eq = float(f'{S_eq:.4e}') # formatting result so it displays in standard form with 4 decimals (same precision as ranges)
+    S_eq = float('{:.4f}'.format(Seq))
     return S_eq
